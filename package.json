@@ -3,17 +3,23 @@
    "version": "0.0.1",
    "description": "Awesome project developed with TypeORM.",
    "devDependencies": {
-      "ts-node": "8.3.0",
       "@types/node": "^12.7.2",
+      "@typescript-eslint/eslint-plugin": "^2.0.0",
+      "@typescript-eslint/parser": "^2.0.0",
+      "ts-node": "8.3.0",
       "typescript": "3.5.3"
    },
    "dependencies": {
-      "typeorm": "0.2.18",
+      "pg": "^7.12.1",
       "reflect-metadata": "^0.1.13",
-      "pg": "^7.12.1"
+      "typeorm": "0.2.18"
    },
    "scripts": {
       "start": "ts-node src/index.ts",
       "createdb": "bash src/scripts/createdb.sh"
-   }
+   },
+   "standard": {
+      "parser": "@typescript-eslint/parser",
+      "plugins": [ "@typescript-eslint/eslint-plugin" ]
+    }
 }
